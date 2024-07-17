@@ -22,12 +22,6 @@ spec:
       - name: app-test-1
         securityContext:
           allowPrivilegeEscalation: false
-          capabilities:
-            drop: ["ALL"]
-          runAsNonRoot: true
-          runAsUser: 10000
-          seccompProfile:
-            type: RuntimeDefault
         image: nginx
         ports:
         - name: web
