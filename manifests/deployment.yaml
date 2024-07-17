@@ -24,7 +24,7 @@ spec:
           allowPrivilegeEscalation: false
           seccompProfile:
             type: RuntimeDefault
-        image: nginx-unprivileged:1.26-perl
+        image: nginxinc/nginx-unprivileged:1.26-perl
         ports:
         - name: web
           containerPort: 80
