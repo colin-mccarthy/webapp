@@ -20,6 +20,13 @@ spec:
     spec:
       containers:
       - name: app-test-1
+      resources:
+        limits:
+          cpu: 300m
+          memory: 200Mi
+        requests:
+          cpu: 200m
+          memory: 100Mi
         securityContext:
           allowPrivilegeEscalation: false
           runAsNonRoot: true
