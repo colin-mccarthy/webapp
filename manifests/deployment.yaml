@@ -22,6 +22,8 @@ spec:
       - name: app-test-1
         securityContext:
           allowPrivilegeEscalation: false
+          seccompProfile:
+            type: RuntimeDefault
         image: nginx
         ports:
         - name: web
