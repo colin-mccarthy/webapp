@@ -20,6 +20,11 @@ spec:
     spec:
       containers:
       - name: app-test-1
+        securityContext:
+          allowPrivilegeEscalation: false
+          runAsNonRoot: true
+          seccompProfile:
+            type: RuntimeDefault
         image: nginxinc/nginx-unprivileged:1.26-perl
         ports:
         - name: web
